@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace WPF_SQL.View.Pages.Tests
 {
     /// <summary>
-    /// Логика взаимодействия для SecondTestPage.xaml
+    /// Логика взаимодействия для FirstTest.xaml
     /// </summary>
-    public partial class SecondTestPage : Page
+    public partial class FirstTest : UserControl
     {
-        public SecondTestPage()
+        public FirstTest()
         {
             InitializeComponent();
         }
