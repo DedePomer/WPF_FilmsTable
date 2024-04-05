@@ -13,5 +13,10 @@ namespace WPF_SQL.ViewModel
         // Навигация
         NavigationStore navigationStore = new NavigationStore();
         public ViewModelBase? CurrentViewModel => navigationStore.CurrentViewModel;
+
+        public MainWindowViewModel()
+        { 
+            navigationStore.CurrentViewModel = new ;
+        }
     }
 }
