@@ -9,9 +9,10 @@ namespace WPF_SQL.Infrastructure.Navigation
 {
     internal class NavigationStore
     {
+        //Здесь хранится текущаяя ViewModel
         private ViewModelBase? _currentViewModel;
-
-        public ViewModelBase? CurrentViewModel {             
+        public ViewModelBase? CurrentViewModel 
+        {             
             get => _currentViewModel;
             set
             {
