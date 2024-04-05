@@ -10,7 +10,6 @@
 
   <ItemGroup>
     <Folder Include="Infrastructure\Command\Base\" />
-    <Folder Include="Infrastructure\Navigation\" />
     <Folder Include="Model\" />
     <Folder Include="Data\" />
   </ItemGroup>
