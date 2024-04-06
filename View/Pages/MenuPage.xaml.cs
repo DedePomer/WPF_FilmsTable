@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace WPF_SQL.View.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для FilmsTablePage.xaml
+    /// Логика взаимодействия для MenuPage.xaml
     /// </summary>
-    public partial class FilmsTablePage : UserControl
+    public partial class MenuPage : UserControl
     {
-        public FilmsTablePage()
+        public MenuPage()
         {
             InitializeComponent();
         }
