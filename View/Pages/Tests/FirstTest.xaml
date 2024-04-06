@@ -9,6 +9,6 @@
     
     <Grid Background="Blue">
         <TextBlock Text="1" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="50" Background="Red"/>
-        <Button Width="50"  Height="50" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,264,0,0"/>
+        <Button Command="{Binding NavigateSecondTestCommand}" Width="50"  Height="50" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,264,0,0"/>
     </Grid>
 </UserControl>
