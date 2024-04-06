@@ -14,10 +14,12 @@ namespace WPF_SQL.Infrastructure.Command
     internal class NavigationCommand : CommandBase
     {
         private NavigationStore _navigationStore;
+        private readonly Func<ViewModelBase> _createViewModel;
 
-        public NavigationCommand(NavigationStore navigationStore)
+        public NavigationCommand(NavigationStore navigationStore, Func<ViewModelBase> createViewModel)
         {
             _navigationStore = navigationStore;
+            _createViewModel = createViewModel;
         }
 
         public override bool CanExecute(object? parameter)
@@ -27,7 +29,7 @@ namespace WPF_SQL.Infrastructure.Command
 
         public override void Execute(object? parameter)
         {
-            _navigationStore.CurrentViewModel = new SecondTestPageViewModel();
+            _navigationStore.CurrentViewModel = _createViewModel();
         }
     }
 }

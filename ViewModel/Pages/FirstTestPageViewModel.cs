@@ -14,9 +14,9 @@ namespace WPF_SQL.ViewModel.Pages
     {
         public ICommand NavigateSecondTestCommand { get; }
 
-        public FirstTestPageViewModel(NavigationStore navigationStore) 
+        public FirstTestPageViewModel(NavigationStore navigationStore, Func<SecondTestPageViewModel> createSecondTestPageViewModel) 
         {
-            NavigateSecondTestCommand = new NavigationCommand(navigationStore);
+            NavigateSecondTestCommand = new NavigationCommand(navigationStore, createSecondTestPageViewModel);
         }
     }
 }
