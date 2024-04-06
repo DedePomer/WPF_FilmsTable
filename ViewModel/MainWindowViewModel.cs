@@ -20,9 +20,7 @@ namespace WPF_SQL.ViewModel
 
         public MainWindowViewModel()
         {
-            navigationStore.CurrentViewModel = CreateFirstTestPageViewModel();
-
-
+            navigationStore.CurrentViewModel = CreateMenuPageViewModel();
             navigationStore.CurrentViewModelChanged += () => OnCurrentViewChanged();
         }
 
@@ -31,14 +29,14 @@ namespace WPF_SQL.ViewModel
             OnPropertyChanged(nameof(CurrentViewModel));
         }
 
-        private FirstTestPageViewModel CreateFirstTestPageViewModel()
+        private MenuPageViewModel CreateMenuPageViewModel()
         {
-            return new FirstTestPageViewModel(navigationStore, CreateSecondTestPageViewModel);
+            return new MenuPageViewModel(navigationStore, CreateFilmsTablePageViewModel);
         }
 
-        private SecondTestPageViewModel CreateSecondTestPageViewModel()
+        private FilmsTablePageViewModel CreateFilmsTablePageViewModel()
         {
-            return new SecondTestPageViewModel(navigationStore, CreateFirstTestPageViewModel);
+            return new FilmsTablePageViewModel(navigationStore, CreateMenuPageViewModel);
         }
     }
 }

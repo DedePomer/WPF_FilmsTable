@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:vmp="clr-namespace:WPF_SQL.ViewModel.Pages"
         xmlns:vm="clr-namespace:WPF_SQL.ViewModel"
-        xmlns:vp="clr-namespace:WPF_SQL.View.Pages.Tests"
+        xmlns:vp="clr-namespace:WPF_SQL.View.Pages"
         xmlns:local="clr-namespace:WPF_SQL"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
@@ -14,11 +14,11 @@
     </Window.DataContext>
     <ContentControl Content="{Binding CurrentViewModel}">
         <ContentControl.Resources>
-            <DataTemplate DataType="{x:Type vmp:FirstTestPageViewModel }">
-                <vp:FirstTest/>
+            <DataTemplate DataType="{x:Type vmp:MenuPageViewModel}">
+                <vp:MenuPage/>
             </DataTemplate>
-            <DataTemplate DataType="{x:Type vmp:SecondTestPageViewModel }">
-                <vp:SecondTest/>
+            <DataTemplate DataType="{x:Type vmp:FilmsTablePageViewModel }">
+                <vp:FilmsTablePage/>
             </DataTemplate>
         </ContentControl.Resources>
     </ContentControl>
