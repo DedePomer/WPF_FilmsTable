@@ -9,6 +9,9 @@ namespace WPF_SQL.Infrastructure.Navigation
 {
     internal class NavigationStore
     {
+        //?
+        public event Action CurrentViewModelChanged;
+
         //Здесь хранится текущаяя ViewModel
         private ViewModelBase? _currentViewModel;
         public ViewModelBase? CurrentViewModel 
@@ -17,7 +20,14 @@ namespace WPF_SQL.Infrastructure.Navigation
             set
             {
                 _currentViewModel = value;
+                OnCurrentViewModelChanged();
             }
+        }
+
+        //?
+        private void OnCurrentViewModelChanged()
+        {
+            CurrentViewModelChanged?.Invoke();
         }
     }
 }

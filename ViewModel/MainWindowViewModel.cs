@@ -18,7 +18,13 @@ namespace WPF_SQL.ViewModel
 
         public MainWindowViewModel()
         { 
-            navigationStore.CurrentViewModel = new FirstTestPageViewModel();
+            navigationStore.CurrentViewModel = new FirstTestPageViewModel(navigationStore);
+            navigationStore.CurrentViewModelChanged += () => OnCurrentViewChanged();
+        }
+
+        private void OnCurrentViewChanged()
+        {
+            OnPropertyChanged(nameof(CurrentViewModel));
         }
     }
 }
