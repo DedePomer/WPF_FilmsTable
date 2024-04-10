@@ -11,12 +11,12 @@ using WPF_SQL.ViewModel.Pages;
 
 namespace WPF_SQL.Infrastructure.Command
 {
-    internal class NavigationCommand : CommandBase
+    internal class NavigationCommand<VM> : CommandBase where VM : ViewModelBase
     {
         private NavigationStore _navigationStore;
-        private readonly Func<ViewModelBase> _createViewModel;
+        private readonly Func<VM> _createViewModel;
 
-        public NavigationCommand(NavigationStore navigationStore, Func<ViewModelBase> createViewModel)
+        public NavigationCommand(NavigationStore navigationStore, Func<VM> createViewModel)
         {
             _navigationStore = navigationStore;
             _createViewModel = createViewModel;

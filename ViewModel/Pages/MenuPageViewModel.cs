@@ -14,9 +14,9 @@ namespace WPF_SQL.ViewModel.Pages
     {
         public ICommand NavigateToFilmsTablePageCommand { get; }
 
-        public MenuPageViewModel(NavigationStore navigationStore, Func<FilmsTablePageViewModel> createFilmsTablePageViewModel) 
+        public MenuPageViewModel(NavigationStore navigationStore) 
         {
-            NavigateToFilmsTablePageCommand = new NavigationCommand(navigationStore, createFilmsTablePageViewModel);
+            NavigateToFilmsTablePageCommand = new NavigationCommand<FilmsTablePageViewModel>(navigationStore, () => new FilmsTablePageViewModel(navigationStore));
         }
     }
 }

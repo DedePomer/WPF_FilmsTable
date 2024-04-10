@@ -11,6 +11,8 @@
             <RowDefinition Height="67*"/>
             <RowDefinition Height="8*"/>
         </Grid.RowDefinitions>
+
+        <ListBox Grid.Row="0" Background="WhiteSmoke" ></ListBox>
         
         <Grid Grid.Row="1">
             <Grid.ColumnDefinitions>
